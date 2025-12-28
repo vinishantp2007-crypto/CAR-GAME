@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Highway Car Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="title">🏁 Highway Racing</h2>
+
+<!-- TOP BUTTONS -->
+<div class="top-controls">
+  <button onclick="startGame()">START ⏫</button>
+  <button onclick="pauseGame()">⏸️ PAUSE</button>
+  <button onclick="resumeGame()">▶️ RESUME</button>
+</div>
+
+<div class="score">Score: <span id="score">0</span></div>
+
+<div class="game-container">
+  <div class="road paused" id="road">
+    <div class="center-line"></div>
+  </div>
+
+  <img src="blue car.png" class="car player">
+  <img src="enemy.png" class="car enemy">
+  <img src="enemy.png" class="car enemy">
+
+  <!-- GAME OVER -->
+  <div class="game-over" id="gameOver">
+    <h2>Game Over</h2>
+    <p>Your Score: <span id="finalScore"></span></p>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+</div>
+
+<!-- BOTTOM ARROWS -->
+<div class="arrow-controls">
+  <button ontouchstart="moveLeft()" onclick="moveLeft()">⬅️</button>
+  <button ontouchstart="moveRight()" onclick="moveRight()">➡️</button>
+</div>
+
+<p class="hint">⬅️ ➡️ Arrow Keys or Touch Buttons</p>
+
+<script src="script.js"></script>
+</body>
+</html>
